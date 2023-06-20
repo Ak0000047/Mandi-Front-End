@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: url('https://www.springfieldnewssun.com/resizer/WLcS-RXW1bAHmjrkr6FTp2o8GMk=/1066x600/cloudfront-us-east-1.images.arcpublishing.com/coxohio/P3HKQX3TNJEU56DHDYSUUBVAAY.jpg'); background-size: cover; background-position: center;">
+    <div class="container">
+        
+            <button class="btn btn-danger" *ngFor="let c of categories" (click)="getProductByCategory(c)" >{{c.name}}</button>
+        </div>
+    </nav>
+
+
+<section class="py-5" style="background-image: url('https://www.springfieldnewssun.com/resizer/WLcS-RXW1bAHmjrkr6FTp2o8GMk=/1066x600/cloudfront-us-east-1.images.arcpublishing.com/coxohio/P3HKQX3TNJEU56DHDYSUUBVAAY.jpg'); background-size: cover; background-position: center;">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let c of mandi">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="http://127.0.0.1:8000{{c.image}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{c.item_name}}</h5>
+                            <!-- Product price-->
+                            <h6>Rs:{{c.price}}</h6>
+                            {{c.description}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="" [routerLink]="['/products',c.id]">View more</a></div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>

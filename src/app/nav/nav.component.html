@@ -1,0 +1,41 @@
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#!">Nahdi KuzhiManthi</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link" href="#!">About</a></li> -->
+                <li class="nav-item dropdown">
+                    <!-- <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a> -->
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <!-- <li><a class="dropdown-item" href="#!">All Products</a></li> -->
+                        <li><hr class="dropdown-divider" /></li>
+                        <!-- <li><a class="dropdown-item" href="#!">Popular Items</a></li> -->
+                        <!-- <li><a class="dropdown-item" href="#!">New Arrivals</a></li> -->
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <button class="btn btn-outline-dark" type="button" routerLink="carts">
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">{{cartCount.length}}</span>
+                </button>
+            </form>
+            <button class="btn btn-outline-dark ms-2" (click)="signout()">logout</button>
+        </div>
+    </div>
+</nav>
+<!-- Header-->
+<header class="bg-primary py-5" style="background-image: url('https://lh5.googleusercontent.com/proxy/gsJrzLXg_lHI_I0PhNxcebG2xx9d0Kbfy0SIWS4aegH_n-EGhGatCCZ8Kd-HqHuUu-hxYNtFjCBRTOdSUm4NkFCcyAFZ7fIsqvguylkjXsu8i76kVxU=w1200-h630-p-k-no-nu'); background-size: cover; background-position: center;">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fa-twitter" style="font-family: 'sagittis', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 3rem;">Welcome To Nahdi KuzhiManthi</h1>
+            <p class="lead fw-normal text-white-50 mb-0" style="font-family: 'Arial', sans-serif; font-size: 1.5rem;">You only find the Best taste</p>
+        </div>
+    </div>
+</header>
+
+        

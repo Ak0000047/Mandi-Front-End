@@ -1,0 +1,33 @@
+<div class="card" >
+    <div class="row">
+        <div class="col-md-8 cart">
+            <div class="title">
+                <div class="row" >
+                    <div class="col"><h4><b>Shopping Cart</b></h4></div>
+                    <div class="col align-self-center text-right text-muted">{{carts.length}} items</div>
+                </div>
+            </div>    
+            <div class="row border-top border-bottom" *ngFor="let c of carts">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src='{{c.item.image}}'></div>
+                    <div class="col">
+                        
+                        <div class="row">{{c.item.item_name}}</div>
+                    </div>
+                    <div class="col">
+                        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                    </div>
+                    <div class="col"> {{c.item.price|currency:'INR'}}
+                        <button class="btn btn-dark" [routerLink]="['/checkout',c.item.id]">CheckOut</button>
+
+
+                        <button class="btn btn-danger" (click)="deleteCart(c.id)">delete</button>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-danger">
+                <span class="arrow">&leftarrow;</span>
+                <span >Back to shop</span>
+              </button>
+        </div>
+       
